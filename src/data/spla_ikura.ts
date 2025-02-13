@@ -1,4 +1,4 @@
-const sampleCode = `
+const spla_ikura = `
 // スプラトゥーン3のヒーローモードでイクラ集めを自動化するスケッチ
 
 #include <NintendoSwitchControlLibrary.h>
@@ -40,4 +40,4 @@ void loop() {
 }
 `;
 
-export default sampleCode;
+export default spla_ikura;
