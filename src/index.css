@@ -10,6 +10,16 @@
   background-image: url('/images/Secret.jpg');
 }
 
+/* 強めのテキストシャドウ（見出し用） */
+.text-shadow-strong {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+/* 軽めのテキストシャドウ（本文用） */
+.text-shadow-light {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
 /* 形状共通のベース */
 .shape-base {
   position: absolute;
