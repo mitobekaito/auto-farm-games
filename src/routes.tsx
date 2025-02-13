@@ -1,6 +1,5 @@
-// src/routes.tsx
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 
 import App from "./App";
 import HeroSection from "./components/HeroSection";
@@ -12,42 +11,26 @@ import NotFound from "./pages/NotFound";
 
 const AppRoutes: React.FC = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
-        {/*
-          親ルート: /auto-farm-games -> <App />
-          <App/> 内の <Outlet/> で子ルートを表示
-        */}
-        <Route path="/auto-farm-games" element={<App />}>
-          {/*
-            index => /auto-farm-games (スラッグなし)
-            ここで HeroSection を表示
-          */}
+        {/* ルート: /auto-farm-games => <App /> */}
+        <Route path="/" element={<App />}>
+          {/* /auto-farm-games (スラッグなし) */}
           <Route index element={<HeroSection />} />
 
-          {/*
-            /auto-farm-games/home => Home
-          */}
+          {/* サブページ */}
           <Route path="home" element={<Home />} />
-
-          {/*
-            /auto-farm-games/about => About
-            /auto-farm-games/docs => Docs
-            /auto-farm-games/secret => Secret
-          */}
           <Route path="about" element={<About />} />
           <Route path="docs" element={<Docs />} />
           <Route path="secret" element={<Secret />} />
 
-          {/*
-            存在しないパス => NotFound 
-          */}
+          {/* 404 Not Found */}
           <Route path="*" element={<NotFound />} />
         </Route>
 
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
