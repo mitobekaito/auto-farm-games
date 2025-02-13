@@ -1,6 +1,3 @@
-// src/App.tsx
-import React from "react";
-
 // コンポーネントのインポート
 import Header from "./components/Header";
 import Footer from "./components/Footer";
