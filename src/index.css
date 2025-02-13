@@ -6,6 +6,9 @@
 .bg-arduboy {
   background-image: url('/images/top-arduboy.jpg');
 }
+.bg-secret {
+  background-image: url('/images/Secret.jpg');
+}
 
 /* 形状共通のベース */
 .shape-base {

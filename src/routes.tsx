@@ -7,6 +7,7 @@ import HeroSection from "./components/HeroSection";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Docs from "./pages/Documents";
+import Secret from "./pages/Secret";
 import NotFound from "./pages/NotFound";
 
 const AppRoutes: React.FC = () => {
@@ -32,9 +33,11 @@ const AppRoutes: React.FC = () => {
           {/*
             /auto-farm-games/about => About
             /auto-farm-games/docs => Docs
+            /auto-farm-games/secret => Secret
           */}
           <Route path="about" element={<About />} />
           <Route path="docs" element={<Docs />} />
+          <Route path="secret" element={<Secret />} />
 
           {/*
             存在しないパス => NotFound 

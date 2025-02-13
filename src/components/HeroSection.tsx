@@ -34,8 +34,16 @@ const HeroSection: React.FC = () => {
             Get Started
           </button>
         </div>
+
+        <div className="flex justify-center items-center">
+      <video className="w-full max-w-2xl rounded-lg shadow-lg" controls>
+        <source src="./videos/nawabato999.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
       </motion.div>
     </section>
+    
   );
 };
 
