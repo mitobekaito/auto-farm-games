@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 
 //デバック用のインポート（後でPagesに入れる。）
 import HeroSection from "./components/HeroSection";
+import Features from "./components/Features";
 
 function App() {
   return (
@@ -71,7 +72,8 @@ function App() {
       <div className="flex flex-col min-h-screen z-10">
         <Header />
         <main className="flex-grow container mx-auto p-4">
-          <HeroSection />
+          {/* <HeroSection /> */}
+          <Features />
         </main>
         <Footer />
       </div>

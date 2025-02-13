@@ -1,4 +1,3 @@
-// src/components/HeroSection.tsx
 import React from "react";
 
 const HeroSection: React.FC = () => {
@@ -17,8 +16,7 @@ const HeroSection: React.FC = () => {
           Arduboy Auto-Farm
         </h1>
         <p className="mb-5">
-          Nintendo SwitchにArduboyを接続して、
-          自動周回を実現するプロジェクトです。
+          Nintendo SwitchにArduboyを接続して、自動周回しよう！
         </p>
         <button className="btn btn-primary">
           Get Started
