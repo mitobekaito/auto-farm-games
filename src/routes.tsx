@@ -5,8 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import HeroSection from "./components/HeroSection";
 import Home from "./pages/Home";
-// import About from "./pages/About";
-// import Docs from "./pages/Docs";
+import About from "./pages/About";
+import Docs from "./pages/Documents";
 import NotFound from "./pages/NotFound";
 
 const AppRoutes: React.FC = () => {
@@ -33,8 +33,8 @@ const AppRoutes: React.FC = () => {
             /auto-farm-games/about => About
             /auto-farm-games/docs => Docs
           */}
-          {/* <Route path="about" element={<About />} /> */}
-          {/* <Route path="docs" element={<Docs />} /> */}
+          <Route path="about" element={<About />} />
+          <Route path="docs" element={<Docs />} />
 
           {/*
             存在しないパス => NotFound 

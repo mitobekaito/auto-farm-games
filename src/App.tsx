@@ -11,7 +11,7 @@ function App() {
         bg-gradient-to-br from-white to-sky-200 text-base-content
       "
     >
-      {/* ◆ 背景に配置する図形たち (z-0) ◆ */}
+      {/* ◆ 背景に配置する図形たち ◆ */}
       <div className="absolute inset-0 z-0">
         {/* 1. 赤い丸 (中) */}
         <span

@@ -12,7 +12,7 @@ const HeroSection: React.FC = () => {
 
   return (
     <section className="hero min-h-[60vh] relative flex items-center justify-center 
-                       bg-gradient-to-r from-purple-600 to-blue-500 text-white">
+                       bg-arduboy from-purple-600 to-blue-500 text-white">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
