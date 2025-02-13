@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    // 相対パスで navigate("home") とすると親ルートに対して /auto-farm-games/home に遷移します
+    // 相対パスで navigate("home") とすると親ルートに対して /auto-farm-games/home に遷移
     navigate("home");
   };
 
