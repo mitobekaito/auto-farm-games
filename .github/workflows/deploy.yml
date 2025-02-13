@@ -29,7 +29,7 @@ jobs:
       - name: プロジェクトをビルド
         run: npm run build
 
-      - name: GitHub Pages へデプロイ
+      - name: GitHub Pages へデプロイ準備
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist  # Vite のビルド結果をアップロード
@@ -37,6 +37,8 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages  # 🔹 ここを追加
     steps:
       - name: GitHub Pages へデプロイ
         uses: actions/deploy-pages@v4
