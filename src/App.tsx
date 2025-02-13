@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 // import HeroSection from "./components/HeroSection";
 // import Features from "./components/Features";
 import FAQ from "./components/FAQ";
+import CodeExample from "./components/CodeExample";
 
 function App() {
   return (
@@ -76,6 +77,7 @@ function App() {
           {/* <HeroSection /> */}
           {/* <Features /> */}
           <FAQ />
+          <CodeExample />
         </main>
         <Footer />
       </div>
