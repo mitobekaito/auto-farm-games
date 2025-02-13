@@ -1,6 +1,10 @@
-import React from "react";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { FiChevronDown, FiHelpCircle } from "react-icons/fi"; // アイコン追加
 
 const FAQ: React.FC = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   const faqs = [
     {
       question: "自動周回に必要なものは？",
@@ -17,20 +21,42 @@ const FAQ: React.FC = () => {
     },
   ];
 
+  // アコーディオンの開閉を制御
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
-    <section className="py-8 flex justify-center">
-      <div className="w-full md:w-2/3 bg-white shadow-md rounded-lg p-6">
-        <h2 className="text-3xl font-bold mb-6 text-red-800 text-center">教えて！しっっつも～～ん！！</h2>
-        <div className="space-y-4">
+    <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-500 text-white flex justify-center">
+      <div className="w-full md:w-2/3 bg-white/70 backdrop-blur-md border border-gray-300 shadow-lg rounded-lg p-8">
+        <h2 className="text-4xl font-extrabold text-center flex items-center justify-center gap-2 mb-6 text-red-800">
+          <FiHelpCircle className="text-red-600 text-3xl" /> 教えて！しっっつも～～ん！！
+        </h2>
+
+        <div className="space-y-6">
           {faqs.map((faq, idx) => (
-            <div key={idx} className="collapse collapse-arrow border border-gray-300 rounded-lg bg-white">
-              <input type="checkbox" className="peer" title="Toggle FAQ" />
-              <div className="collapse-title text-lg font-semibold text-gray-800 peer-checked:bg-gray-100">
-                {faq.question}
-              </div>
-              <div className="collapse-content text-gray-600 text-sm peer-checked:bg-gray-50 p-4 rounded-b-lg">
-                {faq.answer}
-              </div>
+            <div key={idx} className="border border-gray-300 rounded-lg bg-white/80">
+              <button
+                className="w-full flex justify-between items-center p-4 text-lg font-semibold text-gray-800 bg-gray-100 hover:bg-gray-200 transition rounded-t-lg"
+                onClick={() => toggleFAQ(idx)}
+              >
+                <span className="flex items-center gap-2">
+                  <FiHelpCircle className="text-red-500 text-xl" /> {faq.question}
+                </span>
+                <FiChevronDown
+                  className={`transition-transform ${openIndex === idx ? "rotate-180" : ""}`}
+                />
+              </button>
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: openIndex === idx ? "auto" : 0, opacity: openIndex === idx ? 1 : 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="overflow-hidden"
+              >
+                <div className="p-4 bg-gray-50 rounded-b-lg text-gray-700">
+                  {faq.answer}
+                </div>
+              </motion.div>
             </div>
           ))}
         </div>

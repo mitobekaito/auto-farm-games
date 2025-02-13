@@ -35,7 +35,7 @@ const CodeExample: React.FC = () => {
           ソースコード例
         </h2>
         <p className="text-center text-lg text-gray-800 mb-6">
-          クリックしてコードを表示し、コピーできます。
+          クリックしてコードを表示。後日アップデート予定。
         </p>
 
         <div className="space-y-6">
