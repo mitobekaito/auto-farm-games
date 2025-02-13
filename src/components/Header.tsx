@@ -1,10 +1,13 @@
-//ヘッダーとしてナビゲーションバーを表示するコンポーネント
-
 import React from "react";
 
 const Header: React.FC = () => {
   return (
-    <header className="w-full bg-base-100 shadow">
+    <header
+      className="
+        w-full bg-white/30 backdrop-blur-sm 
+        text-base-content shadow
+      "
+    >
       <nav className="navbar container mx-auto">
         {/* navbar-start: 左側 */}
         <div className="navbar-start">

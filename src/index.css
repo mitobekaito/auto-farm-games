@@ -1,3 +1,101 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 画像背景用のクラス */
+.bg-arduboy {
+  background-image: url('/images/top-arduboy.jpg');
+}
+
+/* 形状共通のベース */
+.shape-base {
+  position: absolute;
+  pointer-events: none; /* クリックやホバーを邪魔しない */
+}
+
+/* 1. ○ (circle) */
+.shape-dot {
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 2. △ (triangle)
+   width,height:0; + border で三角形を描く */
+.shape-triangle {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  /* デフォルトは白っぽい色 */
+  border-bottom: 40px solid rgba(255, 255, 255, 0.3);
+}
+
+/* 3. □ (square) */
+.shape-square {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 4. ☆ (star)
+   clip-path で星形を作ります */
+.shape-star {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.3);
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+/* ◆ 色のバリエーション: 背景色を変えるクラス
+   (○, □, ☆ など background-colorで描画している形に有効) */
+.shape-color-red {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+.shape-color-blue {
+  background-color: rgba(0, 0, 255, 0.3);
+}
+.shape-color-green {
+  background-color: rgba(0, 255, 0, 0.3);
+}
+.shape-color-yellow {
+  background-color: rgba(255, 255, 0, 0.3);
+}
+
+/* ◆ 三角形専用: border-bottom で色を変えるバリエーション */
+.shape-triangle-red {
+  border-bottom-color: rgba(255, 0, 0, 0.3);
+}
+.shape-triangle-blue {
+  border-bottom-color: rgba(0, 0, 255, 0.3);
+}
+.shape-triangle-green {
+  border-bottom-color: rgba(0, 255, 0, 0.3);
+}
+.shape-triangle-yellow {
+  border-bottom-color: rgba(255, 255, 0, 0.3);
+}
+
+/* サイズ */
+.shape-sm {
+  width: 30px;
+  height: 30px;
+}
+
+.shape-md {
+  width: 50px;
+  height: 50px;
+}
+
+.shape-lg {
+  width: 80px;
+  height: 80px;
+}
