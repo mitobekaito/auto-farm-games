@@ -1,3 +1,5 @@
+//特徴説明するためのコンポーネント（目次）
+
 import React from "react";
 import { FiList, FiBookOpen } from "react-icons/fi"; // アイコン追加
 
