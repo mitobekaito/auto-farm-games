@@ -6,8 +6,9 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 //デバック用のインポート（後でPagesに入れる。）
-import HeroSection from "./components/HeroSection";
-import Features from "./components/Features";
+// import HeroSection from "./components/HeroSection";
+// import Features from "./components/Features";
+import FAQ from "./components/FAQ";
 
 function App() {
   return (
@@ -73,7 +74,8 @@ function App() {
         <Header />
         <main className="flex-grow container mx-auto p-4">
           {/* <HeroSection /> */}
-          <Features />
+          {/* <Features /> */}
+          <FAQ />
         </main>
         <Footer />
       </div>

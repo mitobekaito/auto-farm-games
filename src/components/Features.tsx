@@ -1,3 +1,4 @@
+//特徴説明するためのコンポーネント（目次）
 import React from "react";
 
 const Features: React.FC = () => {
