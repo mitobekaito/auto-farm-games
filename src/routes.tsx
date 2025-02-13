@@ -2,7 +2,7 @@
 
 import "./index.css";
 
-const App = () => {
+const Routes = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-white p-8">
       <h1 className="text-5xl font-extrabold flex items-center space-x-2">
@@ -26,4 +26,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Routes;
