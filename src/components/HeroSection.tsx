@@ -57,7 +57,7 @@ const HeroSection: React.FC = () => {
               className="btn btn-lg shadow-md hover:shadow-lg transition 
                        bg-gradient-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 to-purple-500 text-white"
             >
-              Get Started
+              詳しく見る
             </button>
           </div>
         </motion.div>
