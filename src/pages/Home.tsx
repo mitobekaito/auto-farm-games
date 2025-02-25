@@ -23,16 +23,15 @@ const Home: React.FC = () => {
       {/* 2) #what-is-arduboy */}
       <section id="what-is-arduboy" className="py-8">
         <h2 className="text-2xl font-semibold mb-4">Arduboyとは？</h2>
-        <p>Arduboyは小型のArduino互換ゲーム機です。詳しい解説や利用事例</p>
+        <p>Arduboyは小型のArduino互換ゲーム機です。レトロゲーム等もできます。
+          詳しい解説や利用事例</p>
       </section>
 
       {/* 3) #features */}
       <section id="features" className="py-8">
         <h2 className="text-2xl font-semibold mb-4">どんなことが出来る？</h2>
         <p className="mb-4">
-          Arduboyを使ってこんなゲームの自動周回が可能です...
-          <br />
-          以下の動画で実際の動作を確認できます。
+          Arduboyを使って以下のようにこんなゲームの自動周回が可能
         </p>
         <div className="flex justify-center items-center">
           <video className="w-full max-w-2xl rounded-lg shadow-lg" controls>
