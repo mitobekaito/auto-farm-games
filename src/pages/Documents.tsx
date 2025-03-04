@@ -1,4 +1,6 @@
 //ドキュメントページ
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Docs: React.FC = () => {
   return (
@@ -6,9 +8,9 @@ const Docs: React.FC = () => {
       <h1 className="text-4xl font-bold mb-4">Documents</h1>
       <p className="text-lg mb-6">React + TypeScript + Vite</p>
       <div className="text-lg mb-6">編集中でごじゃる</div>
-      <a href="/" className="btn btn-primary">
+      <Link to="/" className="btn btn-primary">
         トップページへ戻る
-      </a>
+      </Link>
     </div>
   );
 };

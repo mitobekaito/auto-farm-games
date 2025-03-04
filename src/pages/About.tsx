@@ -1,4 +1,6 @@
 //概要説明
+import React from "react";
+import { Link } from "react-router-dom";
 
 const About: React.FC = () => {
   return (
@@ -6,9 +8,9 @@ const About: React.FC = () => {
       <h1 className="text-4xl font-bold mb-4">About</h1>
       <p className="text-lg mb-6">React + TypeScript + Vite</p>
       <div className="text-lg mb-6">編集中ざます</div>
-      <a href="/" className="btn btn-primary">
+      <Link to="/" className="btn btn-primary">
         トップページへ戻る
-      </a>
+      </Link>
     </div>
   );
 };
