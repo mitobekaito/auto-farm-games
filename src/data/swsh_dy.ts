@@ -1,4 +1,4 @@
-const sesh_dy = `
+const swsh_dy = `
 /**
  * ダイマックスアドベンチャーを自動周回するスケッチ
  *
@@ -43,4 +43,4 @@ void loop() {
     holdButton(Button::B, 1400);
 }`;
 
-export default sesh_dy;
+export default swsh_dy;

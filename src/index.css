@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* 画像背景用のクラス */
 .bg-arduboy {
   background-image: url('/images/top-arduboy.jpg');

@@ -1,38 +1,54 @@
-//特徴説明するためのコンポーネント（目次）
-// 目次の各項目を定義し、リンクを設定
-import React from "react";
+import React, { useEffect } from "react";
 import { FiList, FiBookOpen } from "react-icons/fi"; // アイコン追加
+import { Link, useLocation } from "react-router-dom";
 
 const Features: React.FC = () => {
   const tocItems = [
-    { title: "はじめに", link: "#intro" },
-    { title: "Arduboyとは？", link: "#what-is-arduboy" },
-    { title: "どんなことが出来る？", link: "#features" },
-    { title: "コード例", link: "#code-example" },
-    { title: "今後の展望", link: "#future-plans" },
-    { title: "Q&A", link: "#faq" },
+    { title: "はじめに", link: "intro" },
+    { title: "Arduboyとは？", link: "what-is-arduboy" },
+    { title: "どんなことが出来る？", link: "features" },
+    { title: "コード例", link: "code-example" },
+    { title: "今後の展望", link: "future-plans" },
+    { title: "Q&A", link: "faq" },
   ];
 
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.getElementById(hash.replace("#", ""));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [hash]);
+
   return (
-    <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-500 text-white flex justify-center">
-      <div className="w-full md:w-2/3 bg-white/70 backdrop-blur-md border border-gray-300 shadow-lg rounded-lg p-8">
-        <h2 className="text-4xl font-extrabold text-center flex items-center justify-center gap-2 mb-6 text-gray-800">
-          <FiBookOpen className="text-blue-600 text-3xl" /> 目次
-        </h2>
-        <ol className="list-none border-l-4 border-blue-500 pl-6 space-y-3">
-          {tocItems.map((item, idx) => (
-            <li key={idx} className="relative">
-              <a
-                href={item.link}
-                className="flex items-center gap-2 text-lg font-semibold text-blue-600 hover:text-blue-800 transition duration-200 hover:bg-gray-200 px-3 py-2 rounded-md"
-              >
-                <FiList className="text-blue-400 text-xl" /> {item.title}
-              </a>
-            </li>
-          ))}
-        </ol>
-      </div>
-    </section>
+    <div className="
+      max-w-4xl mx-auto w-full bg-white/60 backdrop-blur-md border border-blue-300 
+      shadow-lg rounded-lg p-6 md:p-8 transform transition-all duration-300 
+      lg:hover:scale-105"
+    >
+      <h2 className="text-3xl font-extrabold text-center md:text-left flex items-center gap-2 mb-6 text-gray-900">
+        <FiBookOpen className="text-blue-500 text-4xl" /> 目次
+      </h2>
+      <ol className="list-none border-l-4 border-blue-400 pl-4 md:pl-6 space-y-3">
+        {tocItems.map((item, idx) => (
+          <li key={idx} className="relative">
+            <Link
+              to={`#${item.link}`}
+              className="
+                flex items-center gap-3 text-lg font-semibold text-gray-800
+                hover:text-blue-600 transition duration-300 
+                bg-white/50 px-4 py-3 rounded-md hover:bg-blue-100
+                w-full md:w-auto"
+            >
+              <FiList className="text-blue-400 text-xl" /> {item.title}
+            </Link>
+          </li>
+        ))}
+      </ol>
+    </div>
   );
 };
 
