@@ -6,7 +6,7 @@ const Features: React.FC = () => {
   const tocItems = [
     { title: "はじめに", link: "intro" },
     { title: "Arduboyとは？", link: "what-is-arduboy" },
-    { title: "どんなことが出来る？", link: "features" },
+    { title: "ゲーム自動周回", link: "features" },
     { title: "コード例", link: "code-example" },
     { title: "今後の展望", link: "future-plans" },
     { title: "Q&A", link: "faq" },

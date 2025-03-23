@@ -22,7 +22,7 @@ const Home: React.FC = () => {
           はじめに
         </h2>
         <p className="text-gray-800 mb-4">
-          どーも皆さんこんにちは！取り敢えずWebページを作ってみたかった人です。
+          こんにちは！人です。
           ゲームが大好きで、時間があるときはずっとやり込んでいます。
           <br />
           しかし、ゲームには必ずといっていいほど
@@ -171,7 +171,7 @@ const Home: React.FC = () => {
         <p className="text-gray-800">
           実際にコミュニティでは、Arduboyを<b>マクロコントローラ</b>に改造し、
           ゲームの自動周回に活用している事例が数多く報告されています。
-          まさに「**遊びながら学べる**」ツールの代表格といえます。
+          まさに「遊びながら学べる」ツールの代表格といえます。
         </p>
 
         <h3 className="text-lg md:text-xl font-semibold text-gray-900 underline decoration-blue-400 mt-6">
@@ -194,7 +194,7 @@ const Home: React.FC = () => {
         className="bg-white/80 shadow-md rounded-lg p-4 md:p-6 my-6 border-l-4 border-blue-400"
       >
         <h2 className="text-xl md:text-2xl font-semibold text-gray-900 underline decoration-blue-400 mb-4">
-          どんなことが出来る？
+          ゲーム自動周回
         </h2>
         <p className="text-gray-800 mb-4">
           Arduboy を Nintendo Switch に接続することで、ボタン入力を自動化し、
