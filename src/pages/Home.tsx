@@ -193,7 +193,7 @@ const Home: React.FC = () => {
         id="features"
         className="bg-white/80 shadow-md rounded-lg p-4 md:p-6 my-6 border-l-4 border-blue-400"
       >
-        <h2 className="text-xl md:text-2xl font-semibold text-gray-900 underline decoration-blue-400 mb-4">
+        <h2 className="scroll-mt-24 text-xl md:text-2xl font-semibold text-gray-900 underline decoration-blue-400 mb-4">
           ゲーム自動周回
         </h2>
         <p className="text-gray-800 mb-4">
