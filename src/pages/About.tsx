@@ -97,10 +97,10 @@ const About: React.FC = () => {
           今後の展開
         </h2>
         <p className="text-gray-800 mb-6 leading-relaxed">
-          ユーザーの要望やアイデアをもとに、
+          ユーザの要望やアイデアをもとに、
           <strong>新しいゲームタイトルへの対応</strong> や
-          <strong>AIを使った高度なボタン入力最適化</strong> など、
-          様々なアップデートを検討中です。
+          <strong>AIを使った高度なボタン入力最適化</strong> （強化学習）など、
+          様々なアップデートを検討中です。また、Switch2にも対応予定です。もちろん予約抽選しました。
           <br />
           さらに、Web Serial API や WebHID を使って、
           <strong>ブラウザから直接Arduboyにプログラムを書き込む機能</strong> も

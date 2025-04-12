@@ -1,17 +1,26 @@
 //トップページのヒーローセクションを表示するコンポーネント
 import React from "react";
 import { motion } from "framer-motion"; // フェードインアニメーション用
-import { useNavigate } from "react-router-dom"; // /home へ遷移
-import JankenGame from "./JankenGame";
+import { useNavigate } from "react-router-dom"; // /page遷移
 
 const HeroSection: React.FC = () => {
   const navigate = useNavigate();
 
-  const handleNavigate = () => {
+  const handleNavigateHome = () => {
     // 相対パスで navigate("home") とすると親ルートに対して /auto-farm-games/home に遷移
     navigate("home");
   };
 
+  const handleNavigateJanken = () => {
+    // 相対パスで navigate("janken") とすると親ルートに対して /auto-farm-games/janken に遷移
+    navigate("janken");
+  };
+
+  const handleNavigateOmikuji = () => {
+    // 相対パスで navigate("omikuji") とすると親ルートに対して /auto-farm-games/omikuji に遷移
+    navigate("omikuji");
+  };
+  
   return (
     <section>
       <div
@@ -46,14 +55,14 @@ const HeroSection: React.FC = () => {
               controls
             >
               <source src="./videos/nawabato999.mp4" type="video/mp4" />
-              動画が見れません
+              お使いの端末では動画が見れませんえん！
             </video>
           </div>
 
           <div className="flex justify-center">
             {/* Homeへ遷移するボタン*/}
             <button
-              onClick={handleNavigate}
+              onClick={handleNavigateHome}
               className="btn btn-lg shadow-md hover:shadow-lg transition 
                        bg-gradient-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 to-purple-500 text-white"
             >
@@ -61,10 +70,23 @@ const HeroSection: React.FC = () => {
             </button>
           </div>
         </motion.div>
-        {/* JankenGameコンポーネントを表示 */}
       </div>
-      <div className="relative z-10 mt-8 w-full px-4">
-        <JankenGame />
+      <div className="relative z-10 mt-8 w-full px-4 flex flex-col md:flex-row justify-center gap-4 md:gap-x-7">
+        {/* じゃんけんゲームボタン */}
+        <button
+          onClick={handleNavigateJanken}
+          className="btn btn-lg w-full md:w-auto shadow-md hover:shadow-lg transition bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white"
+        >
+          じゃんけんゲーム
+        </button>
+
+        {/* おみくじゲームボタン */}
+        <button
+          onClick={handleNavigateOmikuji}
+          className="btn btn-lg w-full md:w-auto shadow-md hover:shadow-lg transition bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-white"
+        >
+          おみくじゲーム
+        </button>
       </div>
     </section>
   );

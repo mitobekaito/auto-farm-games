@@ -8,6 +8,8 @@ import About from "./pages/About";
 import Docs from "./pages/Documents";
 import Secret from "./pages/Secret";
 import NotFound from "./pages/NotFound";
+import Janken from "./pages/JankenGame";
+import Omikuji from "./pages/OmikujiGame";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -20,6 +22,8 @@ const AppRoutes: React.FC = () => {
 
           {/* サブページ */}
           <Route path="home" element={<Home />} />
+          <Route path="janken" element={<Janken />} />
+          <Route path="omikuji" element={<Omikuji />} />
           <Route path="about" element={<About />} />
           <Route path="docs" element={<Docs />} />
           <Route path="secret" element={<Secret />} />

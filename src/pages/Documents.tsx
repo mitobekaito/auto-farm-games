@@ -137,15 +137,15 @@ const Docs: React.FC = () => {
         {/* カラー付きのコードブロック */}
         <div className="bg-gray-900 text-gray-100 p-4 rounded leading-relaxed whitespace-pre-wrap overflow-auto text-sm">
           {`SwitchControlLibrary().pressButton(Button::B);
-SwitchControlLibrary().pressButton(Button::X);
-SwitchControlLibrary().pressHatButton(Hat::UP);
-SwitchControlLibrary().sendReport(); // B、X、↑ボタンを同時に送信
-delay(100);
-SwitchControlLibrary().releaseButton(Button::B);
-SwitchControlLibrary().releaseButton(Button::X);
-SwitchControlLibrary().releaseHatButton(); // 方向キーをニュートラルに
-SwitchControlLibrary().sendReport(); // B、X、↑ボタンを同時に離す
-`}
+            SwitchControlLibrary().pressButton(Button::X);
+            SwitchControlLibrary().pressHatButton(Hat::UP);
+            SwitchControlLibrary().sendReport(); // B、X、↑ボタンを同時に送信
+            delay(100);
+            SwitchControlLibrary().releaseButton(Button::B);
+            SwitchControlLibrary().releaseButton(Button::X);
+            SwitchControlLibrary().releaseHatButton(); // 方向キーをニュートラルに
+            SwitchControlLibrary().sendReport(); // B、X、↑ボタンを同時に離す
+          `}
         </div>
         <p className="text-lg text-gray-800 mb-6 leading-relaxed">
           これらのドキュメントは随時アップデート予定です。
